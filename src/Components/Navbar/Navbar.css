@@ -26,7 +26,11 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.Navbar button{
-    all: unset;
+.Navbar i{
     cursor: pointer;
+}
+.Navbar small{
+    font-size: 14px;
+    display: block;
+    text-align: center;
 }

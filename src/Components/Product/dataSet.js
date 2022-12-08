@@ -15,6 +15,8 @@ const data = [
     image: image1,
     quantity: 1,
     add: <BsCartPlus />,
+    description:
+      "Beans Flour can be used in the preparation of bean cakes (Akara), Moi-moi and other local delicacies that require a lot of tedious work like soaking of the beans, cleaning, peeling and grinding.",
   },
   {
     id: 2,
@@ -23,6 +25,8 @@ const data = [
     quantity: 1,
     image: image2,
     add: <BsCartPlus />,
+    description:
+      "Classic Non-Alcoholic Malt Drink Maltina is a natural drink which provide the extra nourishment to build, protect and revitalize your body. Its delicious, rich and creamy taste can be enjoyed by everyone, everytime.",
   },
 
   {
@@ -32,6 +36,8 @@ const data = [
     image: image5,
     quantity: 1,
     add: <BsCartPlus />,
+    description:
+      "Orijin Bitters is a unique bittersweet spirit, blended with the flavours of specially selected African herbs and fruits, combined to give a bitter-sweet taste. Orijin Bitters exist to promote the vibrancy of modern African culture. Orijin Bitters is a unique bittersweet spirit, blended with the flavours of specially selected African herbs and fruits, combined to give a bitter-sweet taste.",
   },
 
   {
@@ -41,6 +47,8 @@ const data = [
     image: image8,
     quantity: 1,
     add: <BsCartPlus />,
+    description:
+      "BONIKI BALM relieves pains, strains, cold, muscles aches, waist and backache pains, Plantar Fasciitis, sprains and dislocations. Aboniki Balm is MADE WITH ESSENTIAL OILS - Eucalyptus oil might be the most versatile essential oil in the world! It is very effective in combating cold and flu, boosting energy.ABONIKI BALM relieves pains, strains, cold, muscles aches, waist and backache EFFECTIVE relief from Sprains EFFECTIVE relief from Muscle aches Effective relief from Muscle pains Effective relief from Cold symptoms.",
   },
   {
     id: 5,
@@ -49,6 +57,8 @@ const data = [
     image: image9,
     quantity: 1,
     add: <BsCartPlus />,
+    description:
+      "Knorr Chicken Stock Cubes are made with a carefully selected blend of herbs, seasonings and chicken that delicately enhance the natural flavors of your dish.",
   },
   {
     id: 6,
@@ -57,6 +67,8 @@ const data = [
     image: image10,
     quantity: 1,
     add: <BsCartPlus />,
+    description:
+      "Guinness Foreign Extra Stout is a black full-bodied Irish dry stout with a creamy head. The aroma is medium and balanced with a slight hint of roast and fruit. The palate is smooth with rounded flavours of bitter and sweet leading to a dry finish.",
   },
 ];
 

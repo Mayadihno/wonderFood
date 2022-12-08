@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./cart.css";
 
-const Carts = ({ cart, handleRemove, setCart }) => {
+const Carts = ({ cart, setCart }) => {
   const [cartTotal, setCartTotal] = useState(0);
   const Increment = (items, amount) => {
     setCart((cart) =>
@@ -26,6 +26,10 @@ const Carts = ({ cart, handleRemove, setCart }) => {
           : item
       )
     );
+  };
+
+  const handleRemove = (items) => {
+    setCart(cart.filter((product) => product !== items));
   };
 
   useEffect(() => {
@@ -54,42 +58,48 @@ const Carts = ({ cart, handleRemove, setCart }) => {
       {cart.length < 1 ? (
         EmptyCart()
       ) : (
-        <div className="row">
-          <div className="cartsInfo">
-            <h1>Cart Items</h1>
-            <h3>Products</h3>
-          </div>
-          {cart.map((items) => {
-            return (
-              <div className="col-md-4 px-5" key={items.id}>
-                <div className="card mb-3" style={{ width: "18rem" }}>
-                  <div className="card-head">
-                    <div className="cardImg">
-                      <img
-                        src={items.image}
-                        className="card-img-top h-25"
-                        alt="..."
-                      />
+        <div className="container">
+          <div className="row">
+            <div className="cartsInfo">
+              <h1>Cart Items</h1>
+              <h3>Products</h3>
+            </div>
+            {cart.map((items) => {
+              return (
+                <div className="col-md-4 px-5" key={items.id}>
+                  <div
+                    className="card mb-3 mobileScreen"
+                    style={{ width: "18rem" }}
+                  >
+                    <div className="card-head">
+                      <div className="cardImg">
+                        <img
+                          src={items.image}
+                          className="card-img-top h-25"
+                          alt="..."
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="card-body">
-                    <div className="nameprice">
-                      <h5>{items.name}</h5>
-                      <button onClick={() => Decrement(items, 1)}>-</button>
-                      {items.quantity}
-                      <button onClick={() => Increment(items, 1)}>+</button>
-                      <h5>${func(items.price, items.quantity)}</h5>
-                      <button onClick={() => handleRemove(items)}>
-                        Remove
-                      </button>
+                    <div className="card-body">
+                      <div className="nameprice">
+                        <h5>{items.name}</h5>
+                        <button onClick={() => Decrement(items, 1)}>-</button>
+                        {items.quantity}
+                        <button onClick={() => Increment(items, 1)}>+</button>
+                        <h5>${func(items.price, items.quantity)}</h5>
+                        <button onClick={() => handleRemove(items)}>
+                          Remove
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-
-          <h4>Total price ${cartTotal}</h4>
+              );
+            })}
+          </div>
+          <div className="totalCart">
+            <h4>Total price ${cartTotal}</h4>
+          </div>
         </div>
       )}
     </React.Fragment>
